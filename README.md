@@ -1,4 +1,4 @@
-# allinone - BufrValidationDashboard with 3 decoders on board
+# allInOne - BufrValidationDashboard with 3 decoders on board
 
 The following Docker Container provides you the BufrValidationDashboard with the 3 BUFR Decoder libECBUFR, Geo::BUFR and BUFRDC on board.
 
