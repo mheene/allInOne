@@ -7,6 +7,6 @@ services:
 
 install:
 - docker build -t allinone .
-- docker run --rm --name allinone -p 8080:8080 allinone
+- docker run -d --rm --name allinone -p 8080:8080 allinone
 
 script: docker ps | grep -q allinone
