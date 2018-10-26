@@ -20,11 +20,22 @@ Now open in a browser the [dashboard](http://localhost:8080)
 
 That's it. The dashboard and decoders run in a tomcat container on your computer on port 8080. Simply klick on the landing page the link for the dashboard or one of the 3 decoders.
 
-If you want to use on the 3 decoders, please access the container by
+If you want to use on the 3 decoders directly, please access the container by
 
 docker exec -it allinone bash
 
-You are now inside of the container in the directory /usr/local/bufr with is your working directory where you started the container.
+You are now inside of the container in the directory /usr/local/bufr with is your working directory where you started the container. So put all your bufr into this directory which is accessible from inside of the container.
+
+
+BUFRDC
+bufr_decode_all -i myBufr.bin | more
+
+Geo::BUFR
+bufrread.pl --strict_checking 6 --verbose 99 myBufr.bin | more
+
+libECBUFR
+bufr_decoder -strict -inbufr myBufr.bin  | more
+
 
 You can find the image [here](https://hub.docker.com/r/mheene/allinone
 
@@ -36,7 +47,7 @@ For details of the dashboard please refer to (https://github.com/mheene/bufrVali
 
 Supported Decoders
 ==================
-Currently the following decoders are included:
+Currently the following decoders are included into the dashboard:
 
  * BUFR Tools (DWD) [Online version provided by DWD](https://kunden.dwd.de/bufrviewer)
  * ecCodes (ECMWF) [Online version provided by ECMWF](http://apps.ecmwf.int/codes/bufr/validator/)
@@ -50,5 +61,11 @@ Currently the following decoders are included:
 
 Notes:
 ======
+
+If you want to run the image on a hosting platform like openshift.com you can set the environment variable
+
+DECODER_URL http://bufr-allinone.7e14.starter-us-west-2.openshiftapps.com
+
+In that case the links of the result page point to your local decoders.
 
 Your feedback is highly welcomed.
