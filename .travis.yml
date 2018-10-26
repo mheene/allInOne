@@ -1,0 +1,13 @@
+language: python
+python:
+	- 2.7
+
+services:
+	- docker
+
+install:
+	- docker build -t allinOne .
+	- docker run --rm --name allinOne -p 8080:8080 allinone
+
+script:
+	- docker ps | grep -q allinOne
