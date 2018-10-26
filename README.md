@@ -1,5 +1,7 @@
 # allInOne - BufrValidationDashboard with 3 decoders on board
 
+![Build Status](https://api.travis-ci.org/mheene/allInOne.svg?branch=master)
+
 The following Docker Container provides you the BufrValidationDashboard with the 3 BUFR Decoder libECBUFR, Geo::BUFR and BUFRDC on board.
 
 With the help of the BUFR validation dashboard users could now easily check a BUFR with different decoders and receive warnings/errors of each decoder. An online demonstrator is available here
