@@ -6,7 +6,7 @@ services:
 - docker
 
 install:
-- docker build -t allinOne .
-- docker run --rm --name allinOne -p 8080:8080 allinone
+- docker build -t allinone .
+- docker run --rm --name allinone -p 8080:8080 allinone
 
-script: docker ps | grep -q allinOne
+script: docker ps | grep -q allinone
