@@ -1,0 +1,3 @@
+services:
+  redis-commander:
+    build: https://github.com/mheene/allInOne.git

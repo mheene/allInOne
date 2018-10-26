@@ -14,7 +14,7 @@ Docker
 ======
 If you have docker installed simply type
 
-docker run --rm -v "$PWD":/usr/local/bufr: -w /usr/local/bufr --name allinone -p 8080:8080 allinone
+docker run --rm -v "$PWD":/usr/local/bufr: -w /usr/local/bufr --name allinone -p 8080:8080 mheene/allinone
 
 Now open in a browser the [dashboard](http://localhost:8080)
 
@@ -37,13 +37,15 @@ libECBUFR
 bufr_decoder -strict -inbufr myBufr.bin  | more
 
 
-You can find the image [here](https://hub.docker.com/r/mheene/allinone
+You can find the image [here](https://hub.docker.com/r/mheene/allinone)
+
+[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/mheene/allInOne/pwd-image.yml)
 
 ![Docker Build](https://img.shields.io/docker/build/mheene/allinone.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/mheene/allinone.svg)
 
 
-For details of the dashboard please refer to (https://github.com/mheene/bufrValidationDashboard)
+For details of the dashboard please refer to [bufrValidationDashboard](https://github.com/mheene/bufrValidationDashboard)
 
 Supported Decoders
 ==================
