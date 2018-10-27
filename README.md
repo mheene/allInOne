@@ -24,27 +24,33 @@ If you want to use on the 3 decoders directly, please access the container by
 
 `docker exec -it allinone bash`
 
-You are now inside of the container in the directory /usr/local/bufr with is your working directory where you started the container. So put all your bufr into this directory which is accessible from inside of the container.
+You are now inside of the container in the directory /usr/local/bufr which is your working directory where you started the container. So put all your BUFRs into this directory which is accessible from inside of the container.
 
 
 BUFRDC
+
 `bufr_decode_all -i myBufr.bin | more`
 
 Geo::BUFR
+
 `bufrread.pl --strict_checking 6 --verbose 99 myBufr.bin | more`
 
 libECBUFR
+
 `bufr_decoder -strict -inbufr myBufr.bin  | more`
 
 
+
+
+Perhaps you don't have docker and you simply want to get a glimpse into it. Just try this (Docker account needed - you can create your Docker ID [here](https://hub.docker.com/) ):
+
+[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/mheene/allInOne/master/stack.yml)
+
+It runs docker in your browser and pulls the images and runs the dashboard.
+
+
+The image is as automated build on [Docker Hub](https://hub.docker.com/)
 You can find the image [here](https://hub.docker.com/r/mheene/allinone)
-
-Perhaps you don't have docker and you simply want to get a glimpse into it. Just try this:
-
-[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/mheene/allInOne/master/pwd-image.yml)
-
-It runs docker in your browser and pull the images and runs the dashboard.
-
 
 ![Docker Build](https://img.shields.io/docker/build/mheene/allinone.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/mheene/allinone.svg)
